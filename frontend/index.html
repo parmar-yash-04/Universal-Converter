@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Universal File Converter</title>
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Universal File Converter</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    </head>
+
+<body>
+    <div class="app-container">
+        <header>
+            <h1>Universal Converter</h1>
+        </header>
+
+        <div class="main-grid">
+            <!-- Left Panel: Input -->
+            <div class="panel left-panel">
+                <h2>Input File</h2>
+                <div class="preview-area" id="inputPreviewArea">
+                    <div class="drop-zone" id="dropZone">
+                        <span class="icon">📁</span>
+                        <p>Drag & Drop or <strong>Browse</strong></p>
+                        <input type="file" id="fileInput" hidden>
+                    </div>
+                    <img id="inputImagePreview" src="" alt="Input Preview" style="display: none;">
+                    <button id="removeFile" class="remove-btn" style="display: none;">✕</button>
+                </div>
+
+                <div class="controls">
+                    <div class="format-selector">
+                        <label>Convert to:</label>
+                        <div class="format-buttons">
+                            <button class="format-btn" data-format="png">PNG</button>
+                            <button class="format-btn" data-format="jpg">JPG</button>
+                            <button class="format-btn" data-format="webp">WEBP</button>
+                            <button class="format-btn" data-format="pdf">PDF</button>
+                        </div>
+                    </div>
+
+                    <button id="convertBtn" class="action-btn primary" disabled>
+                        Convert Now <span>→</span>
+                    </button>
+                    <div id="statusMessage" class="status"></div>
+                </div>
+            </div>
+
+            <!-- Right Panel: Output -->
+            <div class="panel right-panel">
+                <h2>Output Result</h2>
+                <div class="preview-area output-area" id="outputPreviewArea">
+                    <div class="placeholder-text" id="outputPlaceholder">
+                        <span class="icon">✨</span>
+                        <p>Converted file will appear here</p>
+                    </div>
+                    <img id="outputImagePreview" src="" alt="Output Preview" style="display: none;">
+                </div>
+
+                <div class="output-controls">
+                    <p id="fileDetails" class="file-details" style="display: none;"></p>
+                    <button id="downloadBtn" class="action-btn success" disabled>
+                        Download Image
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
